@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- font awesome cdn -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="./css/output.css" rel="stylesheet">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="main-container  w-full min-h-screen mx-auto flex flex-col gap-2">
+    <!-- start header -->
+    <header id="header"
+      class="w-full h-10 md:h-20 bg-white md:px-8 px-3 py-6 flex gap-1 justify-between items-center shadow-lg shadow-gray-200 sticky top-0">
+      <div class="logo w-10 h-10 md:w-20 md:h-20 ">
+        <a href="#header">
+          <img src="./imgs/eCommerce-logo.jpg" class="w-full cursor-pointer h-full object-contain">
+        </a>
+      </div>
+      <nav class="flex justify-between items-center  md:text-lg gap-4   ">
+        <ul class="list  hidden md:flex justify-between items-center gap-3">
+          <li><a href="index.html"
+              class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  home">Home</a>
+          </li>
+          <li><a href="about.html"
+              class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  about">About</a>
+          </li>
+          <li><a href="contact.html"
+              class="md:text-base break-words text-xs text-cyan-600 transition-colors  contact">Contact-Us</a>
+          </li>
+        </ul>
+
+        <div class="cart relative ">
+          <i class="fa-solid fa-cart-shopping md:text-2xl m-5 cart ">
+              <div
+                  class="counter  flex justify-center items-center
+               md:text-sm text-xs w-4 h-4 md:w-5 md:h-5 rounded-full absolute z-50 md:-top-3 md:left-5 left-3 -top-3 text-white text-center bg-green-500">
+                  0</div>
+          </i>
+          <div
+              class="ordersMenu md:w-96 w-44 h-44 md:h-72 hidden text-sm md:text-base  p-4 shadow-lg shadow-gray-700 overflow-auto absolute z-50 top-12 -left-32 md:top-12 md:-left-72 bg-white rounded  flex-col justify-between items-center">
+          </div>
+      </div>
+
+      <div class="nav-menu md:hidden flex ">
+          <i class="fa-solid fa-bars relative"></i>
+          <div class="nav-menu-content hidden absolute top-10 right-2 bg-white w-20 p-2 shadow-lg shadow-gray-700">
+              
+                <ul class="list flex flex-col justify-between items-center gap-3">
+                  <li><a href="index.html"
+                      class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  home">Home</a>
+                  </li>
+                  <li><a href="about.html"
+                      class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  about">About</a>
+                  </li>
+                  <li><a href="contact.html"
+                      class="md:text-base break-words text-xs text-cyan-600 transition-colors  contact">Contact-Us</a>
+                  </li>
+                </ul>
+          </div>
+      </div>
+      </nav>
+    </header>
+    <!-- End header -->
+
+    <!-- start content -->
+    <div class="contact flex flex-col gap-4 flex-grow  justify-start items-center p-4">
+      <h1 class="md:text-3xl text-base font-bold text-black p-3 ">Contact_Us</h1>
+      <form class="flex flex-col gap-4  items-center">
+        <input type="text" placeholder="Name"
+          class="border-b-2 border-gray-400 bg-gray-100 p-2 md:p-3 md:w-80 w-56 outline-none">
+        <input type="email" id="" placeholder="Email"
+          class="p-1 md:p-2 md:w-80 w-56 outline-none border-b-2 border-gray-400 bg-gray-100">
+        <input type="password" id="" placeholder="Password"
+          class="p-2 md:p-2 md:w-80 w-56 outline-none border-b-2 border-gray-400 bg-gray-100">
+
+        <textarea placeholder="How may we help you?"
+          class="h-56 p-1 md:p-3 md:w-80 w-56 outline-none  border-b-2 border-gray-400 bg-gray-100"></textarea>
+
+        <input type="submit" value="Contact-Us"
+          class="p-1 md:p-2 md:w-80 w-56 outline-none text-white cursor-pointer active:bg-orange-700 bg-orange-500">
+      </form>
+    </div>
+    <!-- end content -->
+
+    <!-- start footer -->
+    <div
+      class="w-full md:h-12 h-5 bg-white text-orange-600 shadow-lg shadow-gray-600 flex justify-center items-center p-5  relative bottom-0">
+      &copy; Doa'a Fakher 2024
+    </div>
+    <!-- end footer -->
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

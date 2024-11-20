@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- font awesome cdn -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="./css/output.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main-container pt-10 md:pt-20 relative  w-full h-full mx-auto flex flex-col gap-4 ">
+        <!-- start header -->
+        <header id="header cairo-bold"
+            class="fixed top-0 z-50 w-full h-10 md:h-20 bg-white md:px-8 px-3 py-6 flex gap-1 justify-between items-center ">
+            <div class="logo w-10 h-10 md:w-20 md:h-20 ">
+                <a href="#header">
+                    <img src="./imgs/eCommerce-logo.jpg" class="w-full cursor-pointer h-full object-contain">
+                </a>
+            </div>
+            <nav class="flex  items-center text-base md:text-lg gap-4  ">
+                <ul class="list hidden md:flex justify-between items-center gap-3">
+                    <li><a href="index.html"
+                            class="md:text-xl break-words text-xs  md:text-secondaryLight transition-colors  home">Home</a>
+                    </li>
+                    <li><a href="about.html"
+                            class="md:text-base break-words text-xs hover:text-secondaryLight transition-colors  about">About</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="md:text-base break-words text-xs hover:text-secondaryLight transition-colors contact">Contact-Us</a>
+                    </li>
+                </ul>
+
+                <div id="cart" class=" relative  bg-red-500">
+                    <i class="fa-solid fa-cart-shopping md:text-2xl m-5 cart ">
+                        <div id="cart-counter"
+                            class=" flex justify-center items-center
+                         md:text-sm text-xs w-4 h-4 md:w-5 md:h-5 rounded-full absolute z-50 md:top-0 md:left-9 left-3 -top-3 text-white text-center bg-green-500">
+                            0</div>
+                    </i>
+                    <div id="cart-container"
+                        class=" md:w-96 w-44 h-44 md:h-72 hidden text-sm md:text-base  p-4 shadow-lg shadow-gray-700 overflow-auto absolute z-50 top-12 -left-32 md:top-12 md:-left-72 bg-white rounded  flex-col justify-between items-center">
+                    </div>
+                </div>
+
+                <div id ="nav-menu"
+                 class="nav-menu md:hidden flex">
+                    <i class="fa-solid fa-bars relative"></i>
+                    <div
+                        class="nav-menu-content  hidden absolute top-10 right-2 bg-white w-20 p-2 shadow-lg shadow-gray-700">
+                        <ul class="list flex flex-col justify-start items-center gap-3">
+                            <li><a href="index.html"
+                                    class=" text-xs  text-secondaryLight transition-colors  home">Home</a>
+                            </li>
+                            <li><a href="about.html"
+                                    class=" text-xs hover:text-secondaryLight transition-colors  about">About</a>
+                            </li>
+                            <li><a href="contact.html"
+                                    class=" text-xs hover:text-secondaryLight transition-colors contact">Contact-Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- End header -->
+
+
+        <!-- start content -->
+        <!-- start carousel -->
+        <div class="relative bg-red-300 w-full h-96 ">
+            <div class="absolute prev  flex justify-center items-center w-20 h-full hover:text-primaryLight">
+                <button class="bg-gray-300 size-10 flex justify-center items-center rounded-full  group">
+                    <i class="fa-solid fa-arrow-left  text-blue-950 group-hover:text-primaryLight"></i>
+                </button>
+            </div>
+            <div class="w-full h-full ">
+                <img id="carousel_image" src="imgs/carousel2.jpg" class="w-full h-full object-cover ">
+            </div>
+
+            <div class="absolute next flex justify-center items-center w-20 h-full top-0 right-0 z-30  ">
+                <button class="  bg-gray-300 size-10 flex justify-center items-center rounded-full  group">
+                    <i class="fa-solid fa-arrow-right  text-blue-950 group-hover:text-primaryLight "></i>
+                </button>
+            </div>
+
+        </div>
+        <!-- end carousel -->
+
+        <div class="flex flex-col gap-4 p-3">
+            <!-- start categories list -->
+            <div id="category-list"
+                class="grid grid-cols-2 md:grid-cols-4  justify-between items-center gap-4 text-center"></div>
+            <!-- end categories list -->
+
+
+            <!-- start categories content-->
+
+            <div  id="products-container"
+             class="grid md:grid-cols-4 gap-5  grid-col-1 bg-white py-2 px-4 ">
+
+            </div>
+        </div>
+        <!-- end categories content -->
+        <!-- end content -->
+
+        <!-- start footer -->
+        <div
+            class="w-full md:h-12 h-5 bg-white text-orange-600 shadow-lg shadow-gray-600 flex justify-center items-center p-5 relative bottom-0">
+            &copy; Doa'a Fakher 2024
+        </div>
+        <!-- end footer -->
+
+
+    </div>
+
+
+    </div>
+
+    <script src="./js/cart.js"></script>
+    <script src="./js/master.js"></script>
+
+</body>
+
+</html>

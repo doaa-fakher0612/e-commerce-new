@@ -1,0 +1,21 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+--primary-light :  rgb(249 115 22);
+--primary-dark :  rgb(154 52 18);
+--secondary-light : rgb(8 145 178);
+--secondary-dark :rgb(22 78 99);
+--base: rgb(75 85 99);
+  }
+
+  @layer base {
+    html {
+      @apply font-cairo font-400;
+    }
+  }
+  
