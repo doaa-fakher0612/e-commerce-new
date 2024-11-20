@@ -39,68 +39,68 @@
               class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  contact">Contact-Us</a>
           </li>
         </ul>
-        <div class="cart relative ">
+        <div id="cart" class=" relative ">
           <i class="fa-solid fa-cart-shopping md:text-2xl m-5 cart ">
-            <div
-              class="counter  flex justify-center items-center
+            <div id="cart-counter"
+              class="  flex justify-center items-center
                md:text-sm text-xs w-4 h-4 md:w-5 md:h-5 rounded-full absolute z-50 md:-top-3 md:left-5 left-3 -top-3 text-white text-center bg-green-500">
               0</div>
           </i>
-          <div
-            class="ordersMenu md:w-96 w-44 h-44 md:h-72 hidden text-sm md:text-base  p-4 shadow-lg shadow-gray-700 overflow-auto absolute z-50 top-12 -left-32 md:top-12 md:-left-72 bg-white rounded  flex-col justify-between items-center">
+          <div id="cart-container"
+            class=" md:w-96 w-44 h-44 md:h-72 hidden text-sm md:text-base  p-4 shadow-lg shadow-gray-700 overflow-auto absolute z-50 top-12 -left-32 md:top-12 md:-left-72 bg-white rounded  flex-col justify-between items-center">
           </div>
         </div>
 
-        <div class="nav-menu md:hidden flex">
+        <div id="nav-menu" class="md:hidden flex">
           <i class="fa-solid fa-bars relative"></i>
           <div class="nav-menu-content hidden absolute top-10 right-2 bg-white w-20 p-2 shadow-lg shadow-gray-700">
-              <ul class="list flex flex-col justify-between items-center gap-3">
-                <li><a href="index.html"
-                    class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  home">Home</a>
-                </li>
-                <li><a href="about.html"
-                    class="md:text-base break-words text-xs text-cyan-600 transition-colors  about">About</a>
-                </li>
-                <li><a href="contact.html"
-                    class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  contact">Contact-Us</a>
-                </li>
-              </ul>
-            
+            <ul class="list flex flex-col justify-between items-center gap-3">
+              <li><a href="index.html"
+                  class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  home">Home</a>
+              </li>
+              <li><a href="about.html"
+                  class="md:text-base break-words text-xs text-cyan-600 transition-colors  about">About</a>
+              </li>
+              <li><a href="contact.html"
+                  class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  contact">Contact-Us</a>
+              </li>
+            </ul>
+
           </div>
         </div>
-  
-  </nav>
-  </header>
-  <!-- End header -->
 
-  <!-- start content -->
-  <p class="xx"></p>
-  <div class="content flex flex-row justify-between items-center p-3 w-full bg-white">
-    <div class="text ">
-      <h1 class="md:text-3xl text-base font-bold text-black p-3  ">Hello To The World Of E-Commerce
-      </h1>
+      </nav>
+    </header>
+    <!-- End header -->
 
-      <p class="p-3 text-base md:text-xl">Here Iam gonna share everything about my life. Books Iam reading, Games Iam
-        Playing, Stories and
-        Events</p>
+    <!-- start content -->
+    <p class="xx"></p>
+    <div class="content flex flex-row justify-between items-center p-3 w-full bg-white">
+      <div class="text ">
+        <h1 class="md:text-3xl text-base font-bold text-black p-3  ">Hello To The World Of E-Commerce
+        </h1>
+
+        <p class="p-3 text-base md:text-xl">Here Iam gonna share everything about my life. Books Iam reading, Games Iam
+          Playing, Stories and
+          Events</p>
+      </div>
+
+      <div class="logo flex-grow flex justify-center items-center ">
+        <img class="h-full w-full md:object-contain" src="imgs/eCommerce-logo.jpg">
+      </div>
     </div>
 
-    <div class="logo flex-grow flex justify-center items-center ">
-      <img class="h-full w-full md:object-contain" src="imgs/eCommerce-logo.jpg">
+
+    <!-- end content -->
+
+    <!-- start footer -->
+    <div
+      class="w-full md:h-12 h-5 bg-white text-orange-600 shadow-lg shadow-gray-600 flex justify-center items-center p-5  relative bottom-0">
+      &copy; Doa'a Fakher 2024
     </div>
+    <!-- end footer -->
   </div>
-
-
-  <!-- end content -->
-
-  <!-- start footer -->
-  <div
-    class="w-full md:h-12 h-5 bg-white text-orange-600 shadow-lg shadow-gray-600 flex justify-center items-center p-5  relative bottom-0">
-    &copy; Doa'a Fakher 2024
-  </div>
-  <!-- end footer -->
-</div>
-  <script src="cart.js"></script>
+  <script src="js/cart.js"></script>
 
 </body>
 

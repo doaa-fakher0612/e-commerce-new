@@ -1,8 +1,8 @@
-let cartCounter = document.querySelector("#cart-counter");
 let cartContainer = document.querySelector("#cart-container");
 let cart = document.querySelector("#cart");
-let navMenu = document.querySelector("#nav-menu")
+let navMenu = document.querySelector("#nav-menu");
 
+console.log("cart", cart);
 cart.onmouseover = function () {
   cartContainer.style.display = "flex";
 };
@@ -20,7 +20,6 @@ navMenu.onmouseout = function () {
 let cartItems = [];
 
 const localStorageItems = localStorage.getItem("cart");
-
 if (localStorageItems) {
   const localStorageCartItems = JSON.parse(localStorageItems);
 
@@ -29,6 +28,7 @@ if (localStorageItems) {
 }
 
 function renderCartItems(cartItems) {
+  let cartCounter = document.querySelector("#cart-counter");
   cartCounter.innerText = cartItems.length;
   cartContainer.innerHTML = "";
   cartItems.forEach((cartItem) => {
@@ -60,7 +60,7 @@ function renderCartItems(cartItems) {
       "h-32",
       "md:w-20",
       "md:h-20",
-      "rounded",   
+      "rounded",
       "flex",
       "flex-col",
       "gap-2",
@@ -100,7 +100,7 @@ function renderCartItems(cartItems) {
       "md:text-xl",
       "text-base",
     );
-    cartItemPrice.innerText = "Price: "+cartItem.price + " $";
+    cartItemPrice.innerText = "Price: " + cartItem.price + " $";
     cartItemTextContainer.appendChild(cartItemPrice);
 
     let cartItemRemoveButton = document.createElement("button");
@@ -125,10 +125,11 @@ function renderCartItems(cartItems) {
       renderCartItems(newCartItems);
 
       // }
-    };cartItemRemoveButton.innerText = "Remove item";
+    };
+    cartItemRemoveButton.innerText = "Remove item";
     cartItemRemoveButton.onclick = function () {
       let found = false;
-    
+
       // Filter to exclude only the first match
       const newCartItems = cartItems.filter((currentCartItem) => {
         if (!found && currentCartItem.id === cartItem.id) {
@@ -137,13 +138,13 @@ function renderCartItems(cartItems) {
         }
         return true; // Keep the rest
       });
-    
+
       // Update local storage and re-render
       cartItems = newCartItems;
       localStorage.setItem("cart", JSON.stringify(newCartItems));
       renderCartItems(newCartItems);
     };
-    
+
     cartItemContainer.appendChild(cartItemRemoveButton);
 
     const cartItemsSeparator = document.createElement("hr");
