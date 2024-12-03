@@ -1,107 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- font awesome cdn -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/output.css" rel="stylesheet" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
-  <link rel="stylesheet" href="./css/main.css">
-  <!-- font awesome cdn -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link href="./css/output.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
+  <body>
+    <div class="main-container mx-auto flex min-h-screen w-full flex-col gap-2">
+      <!-- start header -->
+      <header
+        id="header"
+        class="sticky top-0 flex h-10 w-full items-center justify-between gap-1 bg-white px-3 py-6 shadow-lg shadow-gray-200 md:h-20 md:px-8"
+      >
+        <div class="logo h-10 w-10 md:h-20 md:w-20">
+          <a href="#header">
+            <img
+              src="./imgs/eCommerce-logo.jpg"
+              class="h-full w-full cursor-pointer object-contain"
+            />
+          </a>
+        </div>
+        <nav class="flex items-center justify-between">
+          <ul class="list hidden items-center justify-between gap-3 md:flex">
+            <li>
+              <a
+                href="index.html"
+                class="home break-words text-xs transition-colors hover:text-cyan-600 md:text-base"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="about break-words text-xs text-cyan-600 transition-colors md:text-base md:text-secondaryLight"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="contact break-words text-xs transition-colors hover:text-cyan-600 md:text-base"
+                >Contact-Us</a
+              >
+            </li>
+          </ul>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+          <div id="cart" class="relative">
+            <div class="relative">
+              <i class="fa-solid fa-cart-shopping cart m-5 md:text-2xl"></i>
 
-</head>
+              <div
+                id="cart-counter"
+                class="absolute top-1 right-0  z-50 flex h-4 w-4 items-center justify-center rounded-full bg-orange-500 text-center text-xs text-white md:left-9 md:top-1 md:h-5 md:w-5 md:text-sm"
+              >
+                0
+              </div>
+            </div>
 
-<body>
-
-  <div class="main-container  w-full min-h-screen mx-auto flex flex-col gap-2">
-    <!-- start header -->
-    <header id="header"
-      class="w-full h-10 md:h-20 bg-white md:px-8 px-3 py-6 flex gap-1 justify-between items-center shadow-lg shadow-gray-200 sticky top-0">
-      <div class="logo w-10 h-10 md:w-20 md:h-20 ">
-        <a href="#header">
-          <img src="./imgs/eCommerce-logo.jpg" class="w-full cursor-pointer h-full object-contain">
-        </a>
-      </div>
-      <nav class="flex justify-between items-center ">
-        <ul class="list  hidden md:flex  justify-between items-center gap-3">
-          <li><a href="index.html"
-              class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  home">Home</a>
-          </li>
-          <li><a href="about.html"
-              class="md:text-base break-words text-xs text-cyan-600 transition-colors  about">About</a>
-          </li>
-          <li><a href="contact.html"
-              class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  contact">Contact-Us</a>
-          </li>
-        </ul>
-        <div id="cart" class=" relative ">
-          <i class="fa-solid fa-cart-shopping md:text-2xl m-5 cart ">
-            <div id="cart-counter"
-              class="  flex justify-center items-center
-               md:text-sm text-xs w-4 h-4 md:w-5 md:h-5 rounded-full absolute z-50 md:-top-3 md:left-5 left-3 -top-3 text-white text-center bg-green-500">
-              0</div>
-          </i>
-          <div id="cart-container"
-            class=" md:w-96 w-44 h-44 md:h-72 hidden text-sm md:text-base  p-4 shadow-lg shadow-gray-700 overflow-auto absolute z-50 top-12 -left-32 md:top-12 md:-left-72 bg-white rounded  flex-col justify-between items-center">
+            <div
+              id="cart-container"
+              class="absolute -left-32 top-12 z-50 hidden h-44 w-44 flex-col items-center justify-between overflow-auto rounded bg-white p-4 text-sm shadow-lg shadow-gray-700 md:-left-72 md:top-12 md:h-72 md:w-96 md:text-base"
+            ></div>
           </div>
+
+          <div id="nav-menu" class="nav-menu flex md:hidden relative ">
+            <i class="fa-solid fa-bars "></i>
+            <div id ="nav-menu-content"
+                class="absolute -left-14 top-4 hidden w-20 bg-white rounded p-2 shadow-lg shadow-gray-700">
+                <ul class="list flex flex-col items-center justify-start gap-3">
+                    <li>
+                        <a href="index.html" class="home text-xs hover:text-secondaryLight transition-colors">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html"
+                            class="about text-xs transition-colors text-secondaryLight">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"
+                            class="contact text-xs transition-colors hover:text-secondaryLight">Contact-Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+      </header>
+      <!-- End header -->
+
+      <!-- start content -->
+
+      <div
+        class="content flex w-full flex-row items-center justify-between bg-white p-3"
+      >
+        <div class="text">
+          <h1 class="p-3 text-base font-bold text-black md:text-3xl">
+            Hello To The World Of E-Commerce
+          </h1>
+
+          <p class="p-3 text-base md:text-xl">
+            Here Iam gonna share everything about my life. Books Iam reading,
+            Games Iam Playing, Stories and Events
+          </p>
         </div>
 
-        <div id="nav-menu" class="md:hidden flex">
-          <i class="fa-solid fa-bars relative"></i>
-          <div class="nav-menu-content hidden absolute top-10 right-2 bg-white w-20 p-2 shadow-lg shadow-gray-700">
-            <ul class="list flex flex-col justify-between items-center gap-3">
-              <li><a href="index.html"
-                  class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  home">Home</a>
-              </li>
-              <li><a href="about.html"
-                  class="md:text-base break-words text-xs text-cyan-600 transition-colors  about">About</a>
-              </li>
-              <li><a href="contact.html"
-                  class="md:text-base break-words text-xs hover:text-cyan-600 transition-colors  contact">Contact-Us</a>
-              </li>
-            </ul>
-
-          </div>
+        <div class="logo flex flex-grow items-center justify-center">
+          <img
+            class="h-full w-full md:object-contain"
+            src="imgs/eCommerce-logo.jpg"
+          />
         </div>
-
-      </nav>
-    </header>
-    <!-- End header -->
-
-    <!-- start content -->
-    <p class="xx"></p>
-    <div class="content flex flex-row justify-between items-center p-3 w-full bg-white">
-      <div class="text ">
-        <h1 class="md:text-3xl text-base font-bold text-black p-3  ">Hello To The World Of E-Commerce
-        </h1>
-
-        <p class="p-3 text-base md:text-xl">Here Iam gonna share everything about my life. Books Iam reading, Games Iam
-          Playing, Stories and
-          Events</p>
       </div>
 
-      <div class="logo flex-grow flex justify-center items-center ">
-        <img class="h-full w-full md:object-contain" src="imgs/eCommerce-logo.jpg">
+      <!-- end content -->
+
+      <!-- start footer -->
+      <div
+        class="relative bottom-0 flex h-5 w-full items-center justify-center bg-white p-5 text-orange-600 shadow-lg shadow-gray-600 md:h-12"
+      >
+        &copy; Doa'a Fakher 2024
       </div>
+      <!-- end footer -->
     </div>
-
-
-    <!-- end content -->
-
-    <!-- start footer -->
-    <div
-      class="w-full md:h-12 h-5 bg-white text-orange-600 shadow-lg shadow-gray-600 flex justify-center items-center p-5  relative bottom-0">
-      &copy; Doa'a Fakher 2024
-    </div>
-    <!-- end footer -->
-  </div>
-  <script src="js/cart.js"></script>
-
-</body>
-
+    <script src="js/cart.js"></script>
+  </body>
 </html>

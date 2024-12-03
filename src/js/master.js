@@ -182,7 +182,7 @@ products.forEach((product)=>{
   productCard.appendChild(textContainer);
 
   let productTitle = document.createElement("h1");
-  productTitle.classList.add("title", "md:text-2xl", "font-bold", "text-xl");
+  productTitle.classList.add("title", "md:text-2xl", "font-bold", "text-xl","line-clamp-1");
   textContainer.appendChild(productTitle);
   productTitle.innerText = product.title;
 
@@ -193,15 +193,17 @@ products.forEach((product)=>{
     "text-sm",
     "md:text-base",
     "break-words",
+    "line-clamp-3"
   );
   textContainer.appendChild(productDescription);
   productDescription.innerText = product.description;
 
   let productFooter = document.createElement("div");
   productFooter.classList.add(
+    "productFooter",
     "flex",
     "flex-col",
-    "items-end",
+    "items-start",
     "justify-center",
     "w-full",
     "gap-4",
@@ -216,8 +218,9 @@ products.forEach((product)=>{
     "font-bold",
     "text-xl",
     "bg-white",
+    
   );
-productPrice.innerText =`Price: ${product.price}`;
+productPrice.innerText =`Price: ${product.price} $`;
 
   productFooter.appendChild(productPrice);
 

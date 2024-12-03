@@ -1,6 +1,9 @@
 let cartContainer = document.querySelector("#cart-container");
 let cart = document.querySelector("#cart");
 let navMenu = document.querySelector("#nav-menu");
+let navMenuContent = document.querySelector("#nav-menu-content")
+console.log(navMenu)
+console.log(navMenuContent)
 
 console.log("cart", cart);
 cart.onmouseover = function () {
@@ -11,15 +14,16 @@ cart.onmouseout = function () {
 };
 
 navMenu.onmouseover = function () {
-  cartContainer.style.display = "flex";
+  navMenuContent.style.display = "flex";
 };
 navMenu.onmouseout = function () {
-  cartContainer.style.display = "none";
+  navMenuContent.style.display = "none";
 };
 
 let cartItems = [];
 
 const localStorageItems = localStorage.getItem("cart");
+
 if (localStorageItems) {
   const localStorageCartItems = JSON.parse(localStorageItems);
 
@@ -30,6 +34,8 @@ if (localStorageItems) {
 function renderCartItems(cartItems) {
   let cartCounter = document.querySelector("#cart-counter");
   cartCounter.innerText = cartItems.length;
+
+ 
   cartContainer.innerHTML = "";
   cartItems.forEach((cartItem) => {
     let cartItemContainer = document.createElement("div");
@@ -124,8 +130,13 @@ function renderCartItems(cartItems) {
       localStorage.setItem("cart", JSON.stringify(newCartItems));
       renderCartItems(newCartItems);
 
-      // }
+ 
+
     };
+    if (!cartItems){
+        console.log('no cart items')
+        cartContainer.innerText = "No Cart Items"
+    }
     cartItemRemoveButton.innerText = "Remove item";
     cartItemRemoveButton.onclick = function () {
       let found = false;
