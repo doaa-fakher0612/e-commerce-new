@@ -2,6 +2,7 @@ let cartContainer = document.querySelector("#cart-container");
 let cart = document.querySelector("#cart");
 let navMenu = document.querySelector("#nav-menu");
 let navMenuContent = document.querySelector("#nav-menu-content")
+
 console.log(navMenu)
 console.log(navMenuContent)
 
@@ -28,14 +29,18 @@ if (localStorageItems) {
   const localStorageCartItems = JSON.parse(localStorageItems);
 
   cartItems = localStorageCartItems;
+
   renderCartItems(cartItems);
 }
 
 function renderCartItems(cartItems) {
   let cartCounter = document.querySelector("#cart-counter");
   cartCounter.innerText = cartItems.length;
-
- 
+  console.log("cartItems : "+cartItems.length)
+  if (cartItems.length === 0){
+    cartContainer.innerText = "No Items Yet"
+  }
+  
   cartContainer.innerHTML = "";
   cartItems.forEach((cartItem) => {
     let cartItemContainer = document.createElement("div");
