@@ -1,151 +1,122 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <!-- font awesome cdn -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="./css/output.css" rel="stylesheet" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <!-- font awesome cdn -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link href="./css/output.css" rel="stylesheet" />
 
-  <body>
-    <div class="main-container mx-auto flex min-h-screen w-full flex-col gap-2">
-      <!-- start header -->
-      <header
-        id="header"
-        class="sticky top-0 flex h-10 w-full items-center justify-between gap-1 bg-white px-3 py-6 shadow-lg shadow-gray-200 md:h-20 md:px-8"
-      >
-        <div class="logo h-10 w-10 md:h-20 md:w-20">
-          <a href="#header">
-            <img
-              src="./imgs/eCommerce-logo.jpg"
-              class="h-full w-full cursor-pointer object-contain"
-            />
-          </a>
-        </div>
-        <nav class="flex items-center justify-between gap-4 md:text-lg">
-          <ul class="list hidden items-center justify-between gap-3 md:flex">
-            <li>
-              <a
-                href="index.html"
-                class="home break-words text-xs transition-colors hover:text-cyan-600 md:text-base"
-                >Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="about.html"
-                class="about break-words text-xs transition-colors hover:text-cyan-600 md:text-base"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="contact.html"
-                class="contact break-words text-xs text-cyan-600 transition-colors md:text-base md:text-secondaryLight"
-                >Contact-Us</a
-              >
-            </li>
-          </ul>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
-          <div id="cart" class="relative">
-            <div class="relative">
-              <i class="fa-solid fa-cart-shopping cart m-5 md:text-2xl"> </i>
-              <div
-                id="cart-counter"
-                class="absolute top-1 right-0  z-50 flex h-4 w-4 items-center justify-center rounded-full bg-orange-500 text-center text-xs text-white md:left-9 md:top-1 md:h-5 md:w-5 md:text-sm"
-              >
-                0
-              </div>
+</head>
+
+<body>
+  <div class="main-container mx-auto flex min-h-screen w-full flex-col gap-2">
+    <!-- start header -->
+    <header id="header"
+      class="sticky top-0 flex h-10 w-full items-center justify-between gap-1 bg-white px-3 py-6 shadow-lg shadow-gray-200 md:h-20 md:px-8">
+      <div class="logo h-10 w-10 md:h-20 md:w-20">
+        <a href="#header">
+          <img src="./imgs/eCommerce-logo.jpg" class="h-full w-full cursor-pointer object-contain" />
+        </a>
+      </div>
+      <nav class="flex items-center justify-between gap-4 md:text-lg">
+        <ul class="list hidden items-center justify-between gap-3 md:flex">
+          <li>
+            <a href="index.html"
+              class="home break-words text-xs transition-colors hover:text-cyan-600 md:text-base">Home
+            </a>
+          </li>
+          <li>
+            <a href="about.html"
+              class="about break-words text-xs transition-colors hover:text-cyan-600 md:text-base">About</a>
+          </li>
+          <li>
+            <a href="contact.html"
+              class="contact break-words text-xs text-cyan-600 transition-colors md:text-base md:text-secondaryLight">Contact-Us</a>
+          </li>
+        </ul>
+
+        <div id="cart" class="relative">
+          <div class="relative">
+            <i class="fa-solid fa-cart-shopping cart m-5 md:text-2xl"> </i>
+            <div id="cart-counter"
+              class="absolute top-1 right-0  z-50 flex h-4 w-4 items-center justify-center rounded-full bg-orange-500 text-center text-xs text-white md:left-9 md:top-1 md:h-5 md:w-5 md:text-sm">
+              0
             </div>
-
-            <div
-              id="cart-container"
-              class="absolute -left-32 top-12 z-50 hidden h-44 w-44 flex-col items-center justify-between overflow-auto rounded bg-white p-4 text-sm shadow-lg shadow-gray-700 md:-left-72 md:top-12 md:h-72 md:w-96 md:text-base"
-            ></div>
           </div>
 
-          <div id="nav-menu" class="nav-menu flex md:hidden relative ">
-            <i class="fa-solid fa-bars "></i>
-            <div id ="nav-menu-content"
-                class="absolute -left-14 top-4 hidden w-20 bg-white rounded p-2 shadow-lg shadow-gray-700">
-                <ul class="list flex flex-col items-center justify-start gap-3">
-                    <li>
-                        <a href="index.html" class="home text-xs hover:text-secondaryLight transition-colors">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html"
-                            class="about text-xs transition-colors hover:text-secondaryLight">About</a>
-                    </li>
-                    <li>
-                        <a href="contact.html"
-                            class="contact text-xs transition-colors text-secondaryLight">Contact-Us</a>
-                    </li>
-                </ul>
-            </div>
+          <div id="cart-container"
+            class="absolute -left-32 top-12 z-50 hidden h-44 w-44 flex-col items-center justify-between overflow-auto rounded bg-white p-4 text-sm shadow-lg shadow-gray-700 md:-left-72 md:top-12 md:h-72 md:w-96 md:text-base">
+          </div>
         </div>
-        </nav>
-      </header>
-      <!-- End header -->
 
-      <!-- start content -->
-      <div
-        class="contact flex flex-grow flex-col items-center justify-start gap-4 p-4"
-      >
-        <h1 class="p-3 text-base font-bold text-black md:text-3xl">
-          Contact_Us
-        </h1>
-        <form class="flex flex-col items-center gap-4">
-          <input
-            type="text"
-            placeholder="Name"
-            class="w-56 border-b-2 border-gray-400 bg-gray-100 p-2 outline-none md:w-80 md:p-3"
-          />
-          <input
-            type="email"
-            id=""
-            placeholder="Email"
-            class="w-56 border-b-2 border-gray-400 bg-gray-100 p-1 outline-none md:w-80 md:p-2"
-          />
-          <input
-            type="password"
-            id=""
-            placeholder="Password"
-            class="w-56 border-b-2 border-gray-400 bg-gray-100 p-2 outline-none md:w-80 md:p-2"
-          />
+        <div id="nav-menu" class="nav-menu flex md:hidden relative ">
+          <i class="fa-solid fa-bars "></i>
+          <div id="nav-menu-content"
+            class="absolute -left-14 top-4 hidden w-20 bg-white rounded p-2 shadow-lg shadow-gray-700">
+            <ul class="list flex flex-col items-center justify-start gap-3">
+              <li>
+                <a href="index.html" class="home text-xs hover:text-secondaryLight transition-colors">Home</a>
+              </li>
+              <li>
+                <a href="about.html" class="about text-xs transition-colors hover:text-secondaryLight">About</a>
+              </li>
+              <li>
+                <a href="contact.html" class="contact text-xs transition-colors text-secondaryLight">Contact-Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End header -->
 
-          <textarea
-            placeholder="How may we help you?"
-            class="h-56 w-56 border-b-2 border-gray-400 bg-gray-100 p-1 outline-none md:w-80 md:p-3"
-          ></textarea>
+    <!-- start content -->
+    <div class="contact flex flex-grow flex-col items-center justify-start gap-4 p-4">
+      <h1 class="p-3 text-base font-bold text-black md:text-3xl">
+        Contact_Us
+      </h1>
+      <form id="myForm" class="flex flex-col items-center gap-4">
+        <input id="name" required type="text" placeholder="Name"
+          class="w-56 border-b-2 border-gray-400 bg-gray-100 p-2 outline-none md:w-80 md:p-3" />
+        <span class="error" id="name-error"></span>
+        <input type="email" required id="email" placeholder="Email"
+          class="w-56 border-b-2 border-gray-400 bg-gray-100 p-1 outline-none md:w-80 md:p-2" />
+        <span class="error" id="email-error"></span>
+        <input type="password" id="password" placeholder="Password" required minlength="8"
+          class="w-56 border-b-2 border-gray-400 bg-gray-100 p-2 outline-none md:w-80 md:p-2" />
+        <span class="error" id="password-error"></span>
 
-          <input
-            type="submit"
-            value="Contact-Us"
-            class="w-56 cursor-pointer bg-orange-500 p-1 text-white outline-none active:bg-orange-700 md:w-80 md:p-2"
-          />
-        </form>
-      </div>
-      <!-- end content -->
+        <textarea placeholder="How may we help you?" id="msg" required maxlength="500"
+          class="h-56 w-56 border-b-2 border-gray-400 bg-gray-100 p-1 outline-none md:w-80 md:p-3"></textarea>
+        <span class="error" id="message-error"></span>
 
-      <!-- start footer -->
-      <div
-        class="relative bottom-0 flex h-5 w-full items-center justify-center bg-white p-5 text-orange-600 shadow-lg shadow-gray-600 md:h-12"
-      >
-        &copy; Doa'a Fakher 2024
-      </div>
-      <!-- end footer -->
+
+        <button id="submit"
+        onclick="handelSubmit()"
+          class="w-56 cursor-pointer bg-orange-500 p-1 text-white outline-none active:bg-orange-700 md:w-80 md:p-2"
+          type="submit">
+          Contact-Us</button>
+      </form>
     </div>
-    <script src="js/cart.js"></script>
-  </body>
+    <!-- end content -->
+
+    <!-- start footer -->
+    <div
+      class="relative bottom-0 flex h-5 w-full items-center justify-center bg-white p-5 text-orange-600 shadow-lg shadow-gray-600 md:h-12">
+      &copy; Doa'a Fakher 2024
+    </div>
+    <!-- end footer -->
+  </div>
+  <script src="js/formValidation.js"></script>
+  <script src="js/cart.js"></script>
+
+</body>
+
 </html>
